@@ -11,13 +11,28 @@ public class Property
     private double sellingPrice;
     private double area;
 
-    public Property(int propertyID, String owner, String postcode, double sellingPrice, double area)
+    private ArrayList<Facilitie> facilities;
+
+
+    public Property(int propertyID, String owner, String postcode, double sellingPrice, double area, String facilities)
     {
+        this.facilities = facilities;
         this.propertyID = propertyID;
         this.owner = owner;
         this.postcode = postcode;
-        this.sellingPrice = sellingPrice;
+        this.sellingPrice = 200000.00;
         this.area = area;
+    }
+
+
+    public void setFacilities(String facilities)
+    {
+        this.facilities = facilities;
+    }
+
+    public String getFacilities()
+    {
+        return facilities;
     }
 
     public int getPropertyID()
@@ -69,5 +84,19 @@ public class Property
     {
         this.area = area;
     }
+
+    protected String addFacility()
+    {
+        Facility addFacility = new Facility();
+
+
+    }
+
+    private void removeFacility()
+    {
+
+    }
+
+
 
 }
