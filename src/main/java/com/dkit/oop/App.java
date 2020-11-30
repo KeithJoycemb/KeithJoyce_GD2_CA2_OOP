@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 /**
  * OOP - CA#2 - Nov 2020
- * Your Name:
+ * Your Name: Keith Joyce
  * <p>
- * Your GitHub link:
+ * Your GitHub link: https://github.com/KeithJoycemb/KeithJoyce_GD2_CA2_OOP.git
  */
 public class App
 {
@@ -38,6 +38,8 @@ public class App
         properties.add(prop2);
         properties.add(prop3);
 
+        System.out.println(properties);
+
 
 
         System.out.println("Q3 - tests");
@@ -50,7 +52,7 @@ public class App
 
     protected static String displayProperties()
     {
-
+        System.out.println();
 
     }
 
@@ -58,5 +60,6 @@ public class App
     {
 
     }
+
 }
 
