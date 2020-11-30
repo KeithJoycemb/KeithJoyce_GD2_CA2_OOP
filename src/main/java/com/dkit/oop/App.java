@@ -40,15 +40,22 @@ public class App
 
 
 
-
-
-
-
         System.out.println("Q3 - tests");
 
 
         System.out.println("Q4 - tests");
 
+
+    }
+
+    protected static String displayProperties()
+    {
+
+
+    }
+
+    protected String getPropertiesPriceAbove()
+    {
 
     }
 }
