@@ -1,6 +1,5 @@
 package com.dkit.oop;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Property
@@ -10,8 +9,9 @@ public class Property
     private String postcode;
     private double sellingPrice;
     private double area;
+    private String facilities;
 
-    private ArrayList<Facilitie> facilities;
+
 
 
     public Property(int propertyID, String owner, String postcode, double sellingPrice, double area, String facilities)
@@ -85,9 +85,9 @@ public class Property
         this.area = area;
     }
 
-    protected String addFacility()
+    protected void addFacility()
     {
-        Facility addFacility = new Facility();
+
 
 
     }
@@ -97,6 +97,34 @@ public class Property
 
     }
 
+    @Override
+    public String toString()
+    {
+        return "Property{" +
+                "propertyID=" + propertyID +
+                ", owner='" + owner + '\'' +
+                ", postcode='" + postcode + '\'' +
+                ", sellingPrice=" + sellingPrice +
+                ", area=" + area +
+                ", facilities='" + facilities + '\'' +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Property property = (Property) o;
+        return propertyID == property.propertyID &&
+                Double.compare(property.sellingPrice, sellingPrice) == 0 &&
+                Double.compare(property.area, area) == 0 &&
+                Objects.equals(owner, property.owner) &&
+                Objects.equals(postcode, property.postcode) &&
+                Objects.equals(facilities, property.facilities);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(propertyID, owner, postcode, sellingPrice, area, facilities);
+    }
 }
